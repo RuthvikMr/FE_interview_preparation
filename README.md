@@ -58,4 +58,10 @@
 
 <details>
   <summary>Observable VS Promise</summary>
+
+  **Observable**
+   - Observable handles multiple asynchronous events over time and executes only when subscribed.
+  
+  **Promise**
+   - Promise handles single asynchronous event executes immediately upon creation
 </details>
