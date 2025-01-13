@@ -1,5 +1,5 @@
 ### Frontend Interview Questions
-### Angular Questions
+### Basic Angular/React/Javascript Questions
 
 <details>
   <summary>Component VS Decorators VS Directives</summary>
@@ -124,8 +124,29 @@
   **When to Use**
   - **Observable**: When using real time data like live chat updates etc...
   - **Promise**: Fetch single API like user data
+  - **Subjects**: When you need to manually emit events (e.g., button click handlers or event emitters).
 </details>
 
 <details>
   <summary>React VS Angular</summary>
+  
+  | React | Angular |
+  | --- | --- |
+  | A library focusing on building UIs. Requires additional libraries for state management and routing. | A complete framework with built-in tools like dependency injection, routing, and state management |
+  
+</details>
+
+<details>
+  <summary>Angular Architecture VS React Architecture</summary>
+  
+  | Feature | React | Angular |
+  | --- | --- | --- |
+  | **Type** | UI library | Full-fledged framework |
+  | **Building Block** | Components,JSX,Props,State,Context,State Management,Routing `react-router-dom` | Modules,Component,Directives,Services and Dependency Injection,Routing, Change detection
+  | **Language** | JavaScript (TypeScript optional) | TypeScript (built-in support)	|
+  | **Routing** | Requires third-party libraries `react-router` | Built-in with `RouterModule` |
+  | **State Management** | Requires libraries like Redux or Context | Built-in services and RxJS |
+  | **Performance** | Virtual DOM for fast rendering | Optimized with Ahead-of-Time (AOT) Compilation |
+  | **Dependency Injection** | Not built-in; use Context or libraries | Built-in |
+  
 </details>
