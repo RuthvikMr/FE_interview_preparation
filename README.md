@@ -150,3 +150,68 @@
   | **Dependency Injection** | Not built-in; use Context or libraries | Built-in |
   
 </details>
+
+<details>
+  <summary>Auth Guard in Angular</summary>
+
+  **Auth Guard**
+  - Auth Guards implement the `CanActivate` interface to control access to routes
+    
+    ```typescript
+    import { Injectable } from '@angular/core';
+    import { CanActivate, Router } from '@angular/router';
+
+    @Injectable({ providedIn: 'root' })
+    export class AuthGuard implements CanActivate {
+    constructor(private router: Router) {}
+
+    canActivate(): boolean {
+    const isAuthenticated = !!localStorage.getItem('token');
+    if (!isAuthenticated) {
+      this.router.navigate(['/login']);
+    }
+    return isAuthenticated;
+    }
+    }
+    ```
+
+</details>
+
+<details>
+  <summary>Authentication vs Authorization</summary>
+
+  **Difference**
+  - **Authentication**: Verifies the user's identity (e.g., login).
+  - **Authorization**: Determines what resources a user can access based on roles.
+
+  **Example**
+  - **Authentication**:Using JWT tokens for login.
+  - **Authorization**:Restricting access to admin routes based on user roles.
+</details>
+
+<details>
+  <summary>Change Detection in Angular</summary>
+
+  **Answer**: 
+  - Angular’s change detection tracks changes in the component's data model and updates the DOM. By default, it checks the entire component tree.
+  - To optimize performance,`OnPush` strategy for immutable data, ensuring Angular only checks the components when input properties change or an event is triggered.
+  
+</details>
+
+<details>
+  <summary>HTTP Interceptor</summary>
+  
+  **Answer**
+  - HTTP interceptors intercept and modify HTTP requests and responses globally.
+  - Used them to attach JWT tokens to API requests for authentication and log errors globally for debugging. For instance, in a secure app, every outgoing request included an Authorization header set by an interceptor.
+    
+</details>
+
+<details>
+  <summary>CI/CD Pipelines</summary>
+
+  **Answer**
+  - CI/CD pipelines automate testing, building, and deploying code.
+  - This ensures a seamless and error-free deployment process.
+    
+</details>
