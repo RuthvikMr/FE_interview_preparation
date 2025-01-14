@@ -4,6 +4,7 @@
 <details>
   <summary> Hoisting (var, let, const) </summary>
   
+  #### Hoisting
   **Question 1** (Important):
   ```js
 let arr = [1,2];
