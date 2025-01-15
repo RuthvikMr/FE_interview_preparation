@@ -220,35 +220,64 @@ var foo = function () {
 - Function declarations are hoisted with the function definition.
 - The `foo` function declaration is hoisted, and the `var foo` assignment comes later, so the original `foo` function executes.
 
-
-**Question 13**
+**Question 13** : Multiple Declarations and Hoisting
 ```js
+var a = 1;
+
+function test() {
+  console.log(a);
+  var a = 2;
+  console.log(a);
+}
+test();
+console.log(a);
 
 ```
 **Output**:
 ```js
+undefined
+2
+1
 
 ```
 **Explanation**:
+Inside test, the `var` a declaration is hoisted, shadowing the global `a`. It is initialized to `undefined` initially, so `console.log(a)` inside the function prints `undefined` at first and `2` after assignment.
 
 **Question 14**
 ```js
+function tricky() {
+  console.log(a);
+  var a = 10;
+  let b = 20;
+  console.log(b);
+}
+tricky();
 
 ```
 **Output**:
 ```js
-
+undefined
+ReferenceError: Cannot access 'b' before initialization
 ```
 **Explanation**:
+The `let b` is in the **temporal dead zone** until it is initialized, so accessing it before initialization throws a `ReferenceError`.
 
-**Question 15**
+**Question 15**: Nested Function Hoisting
 ```js
+function outer() {
+  console.log(typeof inner);
+  function inner() {}
+  console.log(typeof inner);
+}
+outer();
 
 ```
 **Output**:
 ```js
-
+function
+function
 ```
 **Explanation**:
+The `function inner` is hoisted inside `outer`. Before its definition, typeof inner is "function", not "undefined", because function declarations are hoisted with their definitions.
 
 </details>
