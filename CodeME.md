@@ -281,3 +281,21 @@ function
 The `function inner` is hoisted inside `outer`. Before its definition, typeof inner is "function", not "undefined", because function declarations are hoisted with their definitions.
 
 </details>
+
+<details>
+  <summary>Commonly Asked Questions</summary>
+  
+  ### Commonly Asked Questions during interview
+
+  **Question 1**:
+  ```js
+
+  ```
+  **Output**:
+   ```js
+
+  ```
+
+  **Explanation**:
+  
+</details>
