@@ -287,15 +287,61 @@ The `function inner` is hoisted inside `outer`. Before its definition, typeof in
   
   ### Commonly Asked Questions during interview
 
-  **Question 1**:
+  **Question 1**: (Infosys)
   ```js
-
+const [x,y=5] = [10]
+console.log(x+y);
   ```
   **Output**:
    ```js
-
+15
   ```
 
   **Explanation**:
+  - It is a  `[x,y=5]` is destructuring syntax so in destructuring the values are assigned in the same order as they appear in the array.
+  - So `x = 10` and initially `y = undefined` as there is no value but here `y`=5` so `undefined` will become `5`. `x + y` i.e `10 + 5` = `15`
+
+     **Question 2**: (TCS)
+  ```js
+console.log(!!{});
+console.log(!![]);
+  ```
+  **Output**:
+   ```js
+True
+True
+  ```
+
+  **Explanation**:
+  - In JavaScript, some values are falsy (e.g., 0, "", null, undefined, NaN, and false), and all other values are truthy.
+  - Empty objects `({})` and empty arrays `([])` are truthy values.
+  - So output here will be 1st negation will `!{}` will be give `false` and 2nd negation `!!{}` will give `true` similarly  for `!![]`
+
+     **Question 3**:
+  ```js
+let h = "100px";
+let w = "20px"
+console.log(parseInt(h + w));
+  ```
+  **Output**:
+   ```js
+100
+  ```
+
+  **Explanation**:
+  - `h + w` results in "100px20px", parseInt only takes the 1st valid numbers from the string, anything else is ignored.so after 100 p isn't a number so ignored.
+
+     **Question 4**: (Infosys)
+  ```js
+let x = 1 || 2 && 3;
+console.log(x);
+  ```
+  **Output**:
+   ```js
+1
+  ```
+
+  **Explanation**:
+  - In javascript `AND` operator has more precedence over  `OR`operator. So our expression becomes `2 && 3` `3` will be returned now it checks `1 || 3` OR operator will check truthy value `1 || 3` 1 is truthy so returns final output as `1` 
   
 </details>
