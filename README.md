@@ -222,7 +222,7 @@
 
   **Problem**:
 
-    ```javascript
+    ```typescript
 const characters = 'aaddbccc'
 const countOccurance = {}
 
