@@ -221,6 +221,7 @@
   <summary>Count the occurrence of the characters</summary>
 
   **Problem**:
+
     ```javascript
 const characters = 'aaddbccc'
 const countOccurance = {}
