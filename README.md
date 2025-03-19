@@ -215,3 +215,19 @@
   - This ensures a seamless and error-free deployment process.
     
 </details>
+
+###Interview coding questions
+<details>
+  <summary>Count the occurrence of the characters</summary>
+
+  **Problem**:
+    ```javascript
+const characters = 'aaddbccc'
+const countOccurance = {}
+
+for (let ch of characters){
+countOccurance[ch] = (countOccurance[ch] || 0) + 1;
+}
+console.log(countOccurance)
+    ```
+</details>
