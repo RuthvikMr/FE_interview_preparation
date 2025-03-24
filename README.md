@@ -223,12 +223,11 @@
   **Problem**:
 
     ```typescript
-const characters = 'aaddbccc'
-const countOccurance = {}
-
-for (let ch of characters){
-countOccurance[ch] = (countOccurance[ch] || 0) + 1;
-}
-console.log(countOccurance)
+    const characters = 'aaddbccc'
+    const countOccurance = {}
+    for (let ch of characters){
+    countOccurance[ch] = (countOccurance[ch] || 0) + 1;
+    }
+    console.log(countOccurance);
     ```
 </details>
