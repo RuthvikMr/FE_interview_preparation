@@ -229,7 +229,7 @@ for (let ch of characters) {
     countOccurance[ch] = (countOccurance[ch] || 0) + 1;
 }
 console.log(countOccurance);
-
+```
   **Output**
   ```javascript
   {
