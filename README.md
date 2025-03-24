@@ -223,16 +223,16 @@
   **Problem**:
 
     ```javascript
-    const characters = 'aaddbccc'
-    const countOccurance = {}
-    for (let ch of characters) {
-    countOccurance[ch] = (countOccurance[ch] || 0) + 1;
-    }
-    console.log(countOccurance);
+      const characters = 'aaddbccc'
+      const countOccurance = {}
+      for (let ch of characters) {
+      countOccurance[ch] = (countOccurance[ch] || 0) + 1;
+      }
+      console.log(countOccurance);
     ```
   **Output**
   ```javascript
-    {
+  {
   a:2,
   d:2,
   b:1,
