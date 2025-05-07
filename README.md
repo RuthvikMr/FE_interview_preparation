@@ -216,6 +216,16 @@
     
 </details>
 
+<details>
+  <summary>View Encapsulation in angular</summary>
+  
+  **Question**
+  - Load a child component in another component but exclude the styles of the child component..! How can we achieve this?
+ **Answer**
+- This can be achieved by `disabling the view encapsulation` in the childs component.
+  
+</details>
+
 ### Interview coding questions
 <details>
   <summary>Count the occurrence of the characters</summary>
