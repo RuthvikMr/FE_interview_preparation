@@ -217,12 +217,30 @@
 </details>
 
 <details>
-  <summary>View Encapsulation in angular</summary>
+  <summary>View Encapsulation in Angular</summary>
   
   **Question**
   - Load a child component in another component but exclude the styles of the child component..! How can we achieve this?
- **Answer**
-- This can be achieved by `disabling the view encapsulation` in the childs component.
+
+   **Answer**
+  - This can be achieved by **disabling the view encapsulation** in the childs component.
+  - We can remove the styles effect of the component by setting `ViewEncapsulation` to `None` inside the component's decorator.
+  - Types of encapsulation are:
+  - **Emulated** : Styles are scoped to the component only
+  - **None**: No style scope. Styles are global
+  - **ShadowDom**: Uses real shadowdom for true encapsulation. Meaning When you need strong style encapsulation or we can say it as `ViewEncapsulation.ShadowDom` uses the browser's native Shadow DOM to achieve true encapsulation of a component's template and styles, meaning styles are completely isolated from the rest of the app.
+
+  ```js
+import { Component, ViewEncapsulation } from '@angular/core';
+
+@Component({
+  selector: 'app-child',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.css'],
+  encapsulation: ViewEncapsulation.None  // <<< This line is important
+})
+export class ChildComponent { }
+```
   
 </details>
 
