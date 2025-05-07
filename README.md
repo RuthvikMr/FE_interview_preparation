@@ -244,6 +244,30 @@ export class ChildComponent { }
   
 </details>
 
+<details>
+  <summary>HTML Block Elements and Inline Elements</summary>
+  
+  **Block Elements**
+  - Block elements take up full horizontall space in its container.
+  - They start on new line and adds some space before and after the element.
+  - Example:
+```js
+<address>  <article>    <aside>  <blockquote>  <canvas>  <dd>  <div>  <dl>  <dt>  <fieldset>
+<figcaption>  <figure>  <footer>  <form>  <h1>-<h6>  <header>  <hr>  <li>  <main>  <nav>  <noscript>
+<ol>  <p>  <pre>  <section>  <table>  <tfoot>  <ul>  <video>
+```
+**Inline Elements**
+- Inline elements only takes up as much width necessary.
+- Does not start on new line.
+
+```js
+<a>  <abbr>  <acronym>  <b>  <bdo>  <big>  <br>  <button>  <cite>  <code>  <dfn>  <em>
+<i>  <img>  <input>  <kbd>  <label>  <map>  <object>  <output>  <q>  <samp>  <script>
+<select>  <small>  <span>  <strong>  <sub>  <sup>  <textarea>  <time>  <tt>  <var>
+```
+    
+</details>
+
 ### Interview coding questions
 <details>
   <summary>Count the occurrence of the characters</summary>
