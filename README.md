@@ -206,6 +206,7 @@
      Use of OnPush - Improved performance, Scales better(Especially useful in data-heavy)
 
      ```typescript
+     import { ChangeDetectionStrategy, Component } from '@angular/core';
      @Component({
       selector: 'app-user',
       template: `{{ user.name }}`,
