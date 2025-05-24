@@ -195,7 +195,30 @@
   **Answer**: 
   - Angular’s change detection tracks changes in the component's data model and updates the DOM. By default, it checks the entire component tree.
   - To optimize performance,`OnPush` strategy for immutable data, ensuring Angular only checks the components when input properties change or an event is triggered.
-  
+    **Default Change Detection Strategy**
+ - Angular’s default change detection strategy is to check every component in the component tree from top to bottom whenever any event happens (e.g., click, HTTP response, timer, input change). This can lead to performance issues in large applications because even components whose data hasn't changed get checked.
+   **ChangeDetectionStrategy.OnPush (What OnPush Does)**
+   When `OnPush` is set. Angular will only run change detection for that component if:
+   - An `@Input` reference changes
+   - An event handler inside the component is triggered (like a button click).
+   - Manually triggered using `ChangeDetectorRef.markForCheck()` or `detectChanges()`
+
+     Use of OnPush - Improved performance, Scales better(Especially useful in data-heavy)
+
+     ```typescript
+     @Component({
+    selector: 'app-user',
+    template: `{{ user.name }}`,
+    changeDetection: ChangeDetectionStrategy.OnPush
+  })
+  export class UserComponent {
+  @Input() user!: { name: string };
+    }
+    ```
+In this case:
+If user.name changes but the reference doesn't (same object), the view will not update.
+If you pass a new object like `{ name: 'New Name' }`, Angular detects the change.
+
 </details>
 
 <details>
@@ -266,6 +289,10 @@ export class ChildComponent { }
 <select>  <small>  <span>  <strong>  <sub>  <sup>  <textarea>  <time>  <tt>  <var>
 ```
     
+</details>
+
+<details>
+  <summary>Change </summary>
 </details>
 
 ### Interview coding questions
