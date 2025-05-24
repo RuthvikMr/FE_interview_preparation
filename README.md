@@ -210,9 +210,9 @@
       selector: 'app-user',
       template: `{{ user.name }}`,
       changeDetection: ChangeDetectionStrategy.OnPush
-    })
-    export class UserComponent {
-    @Input() user!: { name: string };
+      })
+      export class UserComponent {
+      @Input() user!: { name: string };
       }
     ```
 In this case:
