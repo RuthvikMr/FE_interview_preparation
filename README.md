@@ -207,13 +207,13 @@
 
      ```typescript
      @Component({
-    selector: 'app-user',
-    template: `{{ user.name }}`,
-    changeDetection: ChangeDetectionStrategy.OnPush
-  })
-  export class UserComponent {
-  @Input() user!: { name: string };
-    }
+      selector: 'app-user',
+      template: `{{ user.name }}`,
+      changeDetection: ChangeDetectionStrategy.OnPush
+    })
+    export class UserComponent {
+    @Input() user!: { name: string };
+      }
     ```
 In this case:
 If user.name changes but the reference doesn't (same object), the view will not update.
