@@ -158,13 +158,13 @@
   - Route Guard is a feature in angular that control navigation from route based custom logic.
   - Type of route Guards
 
-
-    | Guard Type | Purpose |
-    | `canActivate` | Prevent access to route |
-    | `canActivateChild` | prevent access to child route |
-    | `canDeactivate` | prevent leaving a route/component |
-    | `canLoad` | Prevent lazy loading of modules |
-    | `Resolve` | Pre-fetch data before route loads |
+  | Guard Type | Purpose |
+  | --- |--- |
+  | `canActivate` | Prevent access to route |
+  | `canActivateChild` | prevent access to child route |
+  | `canDeactivate` | prevent leaving a route/component |
+  | `canLoad` | Prevent lazy loading of modules |
+  | `Resolve` | Pre-fetch data before route loads |
   
 
   **Auth Guard**
