@@ -307,7 +307,36 @@ export class ChildComponent { }
 </details>
 
 <details>
-  <summary>Change </summary>
+  <summary>CSS Questions</summary>
+  
+  **Q1. Which CSS property is used to set the distance between lines of text.**
+  - `line-height`
+  **Q2.**illustrate how to use this CSS :nth-Child() pseudo class select and style every third list item in an unordered list differently from the rest. Provide this CSS code example along with your explanation**
+  - The `:nth-child()` pseudo-class in CSS allows you to select elements based on their position among siblings.
+  ```js
+  ul li:nth-child(3n) {
+  background-color: lightblue;
+  color: darkblue;
+  font-weight: bold;
+}
+  ```
+```js
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li> <!-- Styled differently -->
+  <li>Item 4</li>
+  <li>Item 5</li>
+  <li>Item 6</li> <!-- Styled differently -->
+  <li>Item 7</li>
+  <li>Item 8</li>
+  <li>Item 9</li> <!-- Styled differently -->
+</ul>
+```
+**Explanation**
+- `:nth-child(3n)` matches every 3rd element: 3, 6, 9, etc.
+- `li:nth-child(3n)` applies the style only to `<li>` elements that are the 3rd, 6th, 9th, etc., child of their parent (`<ul>` in this case).
+
 </details>
 
 ### Interview coding questions
