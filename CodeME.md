@@ -351,7 +351,7 @@ console.log(x);
 
 
 **Find Next Largest**
-- Expected O/p : [4,4,7,9,9,-1] If no greater number put -1
+- Expected O/p : [4,4,7,9,9,-1] If no greater number put -1 (Here 2 loops are used O(n2) try using 1 loop only O(n))
 ```js
 function findNextLargest(arr){
   let res = [];
