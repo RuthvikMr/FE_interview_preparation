@@ -1,4 +1,4 @@
-### Frontend Interview Questions
+### Frontend Interview Questions ([Link Text](https://chatgpt.com/g/g-p-693973d8e0a48191afa1cfc40598f23f-js-angular-questions/project))
 ### Basic Angular/React/Javascript Questions
 
 <details>
@@ -251,6 +251,14 @@ If you pass a new object like `{ name: 'New Name' }`, Angular detects the change
   **Answer**
   - CI/CD pipelines automate testing, building, and deploying code.
   - This ensures a seamless and error-free deployment process.
+    
+</details>
+
+<details>
+  <summary>Event Loops (Imp)</summary>
+
+  **Answer**
+  - The event loop is a JavaScript mechanism that handles asynchronous operations by executing synchronous code first, then microtasks like Promises, and finally macrotasks like setTimeout, enabling non-blocking behavior in a single-threaded environment. (Check more details on this)
     
 </details>
 
