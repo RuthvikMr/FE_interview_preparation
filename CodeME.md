@@ -345,3 +345,29 @@ console.log(x);
   - In javascript `AND` operator has more precedence over  `OR`operator. So our expression becomes `2 && 3` `3` will be returned now it checks `1 || 3` OR operator will check truthy value `1 || 3` 1 is truthy so returns final output as `1` 
   
 </details>
+
+<details>
+<summary>Practice Programs</summary>
+
+
+**Find Next Largest**
+- Expected O/p : [4,4,7,9,9,-1] If no greater number put -1
+```js
+function findNextLargest(arr){
+  let res = [];
+  for(let i = 0; i < arr.length; i++){
+    let nextG = -1;
+    for(let j = i + 1; j < arr.length; j++){
+      if(arr[i] < arr[j]){
+        nextG = arr[j];
+        break;
+      }
+    }
+    res.push(nextG);
+  }
+  console.log(res);
+}
+
+findNextLargest([3,1,4,7,2,9]);
+```
+</details>
