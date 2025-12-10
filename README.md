@@ -1,4 +1,4 @@
-### Frontend Interview Questions ([Link Text](https://chatgpt.com/g/g-p-693973d8e0a48191afa1cfc40598f23f-js-angular-questions/project))
+### Frontend Interview Questions ([GPT](https://chatgpt.com/g/g-p-693973d8e0a48191afa1cfc40598f23f-js-angular-questions/project))
 ### Basic Angular/React/Javascript Questions
 
 <details>
