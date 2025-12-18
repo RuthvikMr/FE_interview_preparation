@@ -370,4 +370,25 @@ function findNextLargest(arr){
 
 findNextLargest([3,1,4,7,2,9]);
 ```
+**Find the missing natural number**
+- Input: n = 5;total length of array including missing number, array = [1,2,4,5]; Expected Output 3
+```
+// find missing number
+let arr = [1,2,4,5];
+let n = 5;
+
+function findMissingNumber(arr){
+  let sum = 0;
+  let diff = 0;
+  for(let i=0;i < arr.length;i++){
+    sum += arr[i];
+  }
+  diff = (n * (n + 1)/2) - sum;
+  return diff;
+}
+
+const missingNumber = findMissingNumber(arr);
+console.log(missingNumber);
+```
+ 
 </details>
