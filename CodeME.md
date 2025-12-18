@@ -371,7 +371,7 @@ function findNextLargest(arr){
 findNextLargest([3,1,4,7,2,9]);
 ```
 **Find the missing natural number**
-- Input: n = 5;total length of array including missing number, array = [1,2,4,5]; Expected Output 3
+- Input: n = 5;total length of array including missing number, array = [1,2,4,5]; Expected Output 3 [checkout: Check how can we achive for multime missing number]
 ```
 // find missing number
 let arr = [1,2,4,5];
