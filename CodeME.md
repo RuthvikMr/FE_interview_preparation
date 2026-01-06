@@ -390,5 +390,35 @@ function findMissingNumber(arr){
 const missingNumber = findMissingNumber(arr);
 console.log(missingNumber);
 ```
+
+**Match the Target**
+- Input: let arr = [1,2,3,4,5,6,7,8,9,11,-1,10]; Target = 10; Expected Output: [ [ 1, 9 ], [ 2, 8 ], [ 3, 7 ], [ 4, 6 ], [ 11, -1 ] ]; Time Complexity O(n)
+```
+function matchTheTarget(arr, target) {
+  const seen = new Set(arr);
+  const output = [];
+
+  for (let num of arr) {
+    const complement = target - num;
+
+    if (seen.has(num) && seen.has(complement)) {
+      // Avoid pairing number with itself unless valid
+      if (num !== complement || (num === complement && arr.filter(x => x === num).length > 1)) {
+        output.push([num, complement]);
+        seen.delete(num);
+        seen.delete(complement);
+      }
+    }
+  }
+
+  return output;
+}
+
+const arr = [1,2,3,4,5,6,7,8,9,11,-1,10];
+const target = 10;
+
+console.log(matchTheTarget(arr, target));
+
+```
  
 </details>
