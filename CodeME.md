@@ -420,5 +420,71 @@ const target = 10;
 console.log(matchTheTarget(arr, target));
 
 ```
+
+**Move the div to the center**
+- Input: Bring the 2nd div to center (Method 1: Using Flex , Method 2: Using Positions)
+```
+/*Method 1*/
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+.outter{
+display:flex;
+align-items:center;
+justify-content:center;
+background-color:yellow;
+width:200px;
+height:200px;
+}
+.inner{
+background-color:red;
+width:100px;
+height:100px;
+}
+</style>
+</head>
+<body>
+
+<div class='outter'>
+<div class='inner'></div>
+</div>
+
+</body>
+</html>
+/*Method 2*/
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+.outter{
+position:relative;
+background-color:yellow;
+width:200px;
+height:200px;
+}
+.inner{
+position:absolute;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+background-color:red;
+width:100px;
+height:100px;
+}
+</style>
+</head>
+<body>
+
+<div class='outter'>
+<div class='inner'></div>
+</div>
+
+</body>
+</html>
+
+```
  
 </details>
