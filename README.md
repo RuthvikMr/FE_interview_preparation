@@ -120,9 +120,10 @@
       Subscriber 3 received: Message 3
       Subscriber 3 received: Message 4
       ```
-    -**Async Subject**
+    - **Async Subject**
     - Emits only Last value
     - Emits only after ```complete()```
+    - Think like 'An Order will be succssefull only after the item is delivered then we call it as completed similary async subject'
     - Example
       ```
       const async = new AsyncSubject();
