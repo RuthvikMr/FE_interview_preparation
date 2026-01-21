@@ -423,6 +423,19 @@ console.log(matchTheTarget(arr, target));
 
 **Move the div to the center**
 - Input: Bring the 2nd div to center (Method 1: Using Flex , Method 2: Using Positions)
+
+ 
+</details>
+
+<details>
+  <summary> CSS/SCSS </summary>
+  
+  #### Hoisting
+  **Move the div to the center**:
+  - Input: Bring the 2nd div to center (Method 1: Using Flex , Method 2: Using Positions, Method 3: using grid)
+  
+```
+**Output**:
 ```
 /*Method 1*/
 <!DOCTYPE html>
@@ -453,11 +466,9 @@ height:100px;
 
 </body>
 </html>
-
-
+```
+```
 /*Method 2*/
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -488,7 +499,38 @@ height:100px;
 
 </body>
 </html>
+```
+```
+
+/*Method 3*/
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+.outter{
+display:grid;
+place-items:center;
+background-color:yellow;
+width:200px;
+height:200px;
+}
+.inner{
+background-color:red;
+width:100px;
+height:100px;
+}
+</style>
+</head>
+<body>
+
+<div class='outter'>
+<div class='inner'></div>
+</div>
+
+</body>
+</html>
 
 ```
- 
+  
 </details>
