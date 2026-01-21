@@ -420,21 +420,15 @@ const target = 10;
 console.log(matchTheTarget(arr, target));
 
 ```
-
-**Move the div to the center**
-- Input: Bring the 2nd div to center (Method 1: Using Flex , Method 2: Using Positions)
-
  
 </details>
 
 <details>
   <summary> CSS/SCSS </summary>
   
-  #### Hoisting
   **Move the div to the center**:
   - Input: Bring the 2nd div to center (Method 1: Using Flex , Method 2: Using Positions, Method 3: using grid)
-  
-```
+
 **Output**:
 ```
 /*Method 1*/
