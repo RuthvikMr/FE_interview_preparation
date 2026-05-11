@@ -384,3 +384,38 @@ console.log(countOccurance);
 ```
 
 </details>
+
+<details>
+  <summary>Find pairs in an array that adds up to a given sum</summary>
+  
+  **Problem**
+
+  ```js
+    var arr= [0,1,2,3,4,5,6,7,8,9,11,-1];
+    Sum = 10;
+  Expected Output: [[1, 9], [2, 8], [3, 7], [4, 6], [11, -1]]
+
+function findSum(arr,n){
+  let map = {}
+  let res = [];
+  for(let i=0;i<arr.length;i++){
+
+    let need = n - arr[i];
+    // console.log(need);
+    if(map[need]){
+      res.push([need,arr[i]]);
+    }
+    map[arr[i]] = true;
+  }
+  return res;
+}
+console.log(findSum([0,1,2,3,4,5,6,7,8,9,11,-1],10))
+
+  ```
+
+  **Output**
+
+  ```js
+[ [ 4, 6 ], [ 3, 7 ], [ 2, 8 ], [ 1, 9 ], [ 11, -1 ] ]
+  ```
+</details>
